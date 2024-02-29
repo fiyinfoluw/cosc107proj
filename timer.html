@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>countdowntimer</title>
+  <link rel="stylesheet" href="timer.css" />
+</head>
+<body>
+
+
+  
+
+<div class="topic">
+
+  <img class="pods" src="pods.jpeg">
+
+  </div>
+
+  <div class="airpods">AIRPODS PRO GIVEAWAY</div>
+
+  <div class="timer">
+    <div>
+      <p id="seconds">00</p>
+      <span>seconds</span>
+    </div>
+    <div>
+      <p id="minutes">00</p>
+      <span>minutes</span>
+    </div>
+    <div>
+      <p id="hours">00</p>
+      <span>hours</span>
+    </div>
+    <div>
+      <p id="days">00</p>
+      <span>days</span>
+    </div>
+  </div>
+
+<script>
+  var countDownDate = new Date("Mar 11, 2024 00:00:00").getTime();
+  var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  
+
+
+  },1000)
+
+</script>
+  <div class="end">giveaway last till March 11, 2024</div>  
+</body>
+</html>
